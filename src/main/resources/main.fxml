@@ -1,0 +1,35 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<VBox fx:controller="com.oskin_denis.java.filemanager.Controller"
+      xmlns:fx="http://javafx.com/fxml" alignment="center">
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem text="Выйти из программы"/>
+        </Menu>
+    </MenuBar>
+    <HBox VBox.vgrow="ALWAYS">
+        <fx:include fx:id="leftPanel" source="panel.fxml"/>
+        <fx:include fx:id="RightPanel" source="panel.fxml"/>
+    </HBox>
+
+    <HBox spacing="5">
+        <Button text="Копировать файл" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        <Button text="Переместить файл" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        <Button text="Удалить файл" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        <Button text="Выход из программы" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#btnExitAction"/>
+        <padding>
+            <Insets bottom="5" left="5" right="5" top="5"/>
+        </padding>
+    </HBox>
+</VBox>
