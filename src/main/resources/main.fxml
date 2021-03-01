@@ -15,19 +15,19 @@
       xmlns:fx="http://javafx.com/fxml" alignment="center">
     <MenuBar>
         <Menu text="Файл">
-            <MenuItem text="Выйти из программы"/>
+            <MenuItem text="Выйти из программы" onAction="#btnExitAction"/>
         </Menu>
     </MenuBar>
     <HBox VBox.vgrow="ALWAYS">
         <fx:include fx:id="leftPanel" source="panel.fxml"/>
-        <fx:include fx:id="RightPanel" source="panel.fxml"/>
+        <fx:include fx:id="rightPanel" source="panel.fxml"/>
     </HBox>
 
     <HBox spacing="5">
-        <Button text="Копировать файл" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
-        <Button text="Переместить файл" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
-        <Button text="Удалить файл" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
-        <Button text="Выход из программы" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#btnExitAction"/>
+        <Button text="Копировать файл" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#copyBtnAction"/>
+        <Button text="Переместить файл" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#moveBtnAction"/>
+        <Button text="Удалить файл" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#deleteBtnAction"/>
+        <Button text="Выход из программы" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#btnExitAction"/>
         <padding>
             <Insets bottom="5" left="5" right="5" top="5"/>
         </padding>
